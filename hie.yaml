@@ -1,0 +1,8 @@
+cradle:
+  stack:
+    - path: "./src/"
+      component: "servant-tutorial:lib"
+    - path: "./app/"
+      component: "servant-tutorial:exe:servant-tutorial-exe"
+    - path: "./test/"
+      component: "servant-tutorial:test:servant-tutorial-test"

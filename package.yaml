@@ -1,0 +1,66 @@
+name:                servant-tutorial
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/worm2fed/servant-tutorial#readme
+github: https://github.com/worm2fed/servant-tutorial
+license:             BSD3
+license-file:        LICENSE
+author:              Andrey Demidenko
+maintainer:          a.demidenko@cactus.vision
+copyright:           Sonus Space
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+
+library:
+  source-dirs: src
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- servant
+- servant-server
+- wai
+- warp
+- text
+- time
+- base-compat-batteries
+- mtl
+- attoparsec
+- bytestring
+- string-conversions
+- http-media
+- directory
+- blaze-markup == 0.8.2.4
+- blaze-html
+- lucid
+
+executables: 
+  servant-tutorial-exe:
+    source-dirs:    app
+    main:           Main.hs
+    ghc-options:         
+    - -threaded 
+    - -rtsopts 
+    - -with-rtsopts=-N
+    dependencies:
+    - base
+    - servant-tutorial
+
+tests: 
+  servant-tutorial-test:
+    type:           exitcode-stdio-1.0
+    source-dirs:    test
+    main:           Spec.hs
+    dependencies:
+    - base
+    - servant-tutorial
+    - hspec
+    - hspec-wai
+    - hspec-wai-json
+    - aeson
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
