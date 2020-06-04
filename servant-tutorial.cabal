@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.31.2.
+-- This file has been generated from package.yaml by hpack version 0.33.0.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: ff4a492972660db96b85448ebc40596ecf929e6b9f05585ee348a4ad84db6c96
+-- hash: 869eb3f21480985e2ee8a2d257e59ee071f9450d397f08337fb15e7fff2614ad
 
 name:           servant-tutorial
 version:        0.1.0.0
@@ -15,7 +15,7 @@ author:         Andrey Demidenko
 maintainer:     a.demidenko@cactus.vision
 copyright:      Sonus Space
 license:        BSD3
-license-file:   LICENSE
+license-file:   LICENSE.md
 build-type:     Simple
 extra-source-files:
     README.md
@@ -27,6 +27,10 @@ source-repository head
 library
   exposed-modules:
       ApiType
+      Authentication
+      Client
+      Docs
+      Javascript
       Lib
       Server
   other-modules:
@@ -41,11 +45,21 @@ library
     , blaze-html
     , blaze-markup ==0.8.2.4
     , bytestring
+    , containers
+    , cookie
     , directory
+    , http-api-data
+    , http-client
     , http-media
+    , http-types
+    , js-jquery
     , lucid
     , mtl
+    , random
     , servant
+    , servant-client
+    , servant-docs
+    , servant-js
     , servant-server
     , string-conversions
     , text
@@ -69,11 +83,21 @@ executable servant-tutorial-exe
     , blaze-html
     , blaze-markup ==0.8.2.4
     , bytestring
+    , containers
+    , cookie
     , directory
+    , http-api-data
+    , http-client
     , http-media
+    , http-types
+    , js-jquery
     , lucid
     , mtl
+    , random
     , servant
+    , servant-client
+    , servant-docs
+    , servant-js
     , servant-server
     , servant-tutorial
     , string-conversions
@@ -99,14 +123,24 @@ test-suite servant-tutorial-test
     , blaze-html
     , blaze-markup ==0.8.2.4
     , bytestring
+    , containers
+    , cookie
     , directory
     , hspec
     , hspec-wai
     , hspec-wai-json
+    , http-api-data
+    , http-client
     , http-media
+    , http-types
+    , js-jquery
     , lucid
     , mtl
+    , random
     , servant
+    , servant-client
+    , servant-docs
+    , servant-js
     , servant-server
     , servant-tutorial
     , string-conversions

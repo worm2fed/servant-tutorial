@@ -5,7 +5,7 @@ version:             0.1.0.0
 homepage:            https://github.com/worm2fed/servant-tutorial#readme
 github: https://github.com/worm2fed/servant-tutorial
 license:             BSD3
-license-file:        LICENSE
+license-file:        LICENSE.md
 author:              Andrey Demidenko
 maintainer:          a.demidenko@cactus.vision
 copyright:           Sonus Space
@@ -21,6 +21,9 @@ dependencies:
 - aeson
 - servant
 - servant-server
+- servant-client
+- servant-js
+- servant-docs
 - wai
 - warp
 - text
@@ -31,10 +34,18 @@ dependencies:
 - bytestring
 - string-conversions
 - http-media
+- http-client
+- http-types
+- http-api-data
 - directory
 - blaze-markup == 0.8.2.4
 - blaze-html
 - lucid
+- random
+- js-jquery
+- containers
+- cookie
+
 
 executables: 
   servant-tutorial-exe:
